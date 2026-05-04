@@ -1,0 +1,82 @@
+{
+  "business": {
+    "name": "JO'STYLE",
+    "tagline": "All Ladies Fashion — One Place",
+    "phone": "7893634888",
+    "whatsapp": "917893634888",
+    "address": "Airport Road, Gadala, Rajahmundry — 533102",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Airport+Road+Gadala+Rajahmundry+533102",
+    "instagram": "https://www.instagram.com/jostyle_rajahmundry",
+    "favicon": "images/favicon.ico"
+  },
+  "founder": {
+    "name": "Jyothi Yarramilli",
+    "title": "Founder & Master Tailor",
+    "image": "images/founder.jpg",
+    "bio": "With over a decade of mastery in traditional and contemporary ladies fashion, Jyothi Yarramilli founded JO'STYLE with a singular vision — to make every woman feel exceptional. From intricate Maggam work to precision blouse stitching, every creation is a testament to her artistry and passion for the craft."
+  },
+  "services": [
+    {
+      "id": 1,
+      "name": "Computer Embroidery",
+      "description": "Precision machine embroidery with intricate patterns — from florals to geometric designs — crafted for sarees, dupattas, and garments.",
+      "icon": "✦",
+      "image": "images/service-embroidery.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Maggam Work",
+      "description": "Exquisite hand-crafted Maggam embroidery using zardozi, cutwork, and mirror accents. A timeless tradition elevated to modern elegance.",
+      "icon": "❋",
+      "image": "images/service-maggam.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Blouse Stitching",
+      "description": "Custom-fit blouses tailored to your measurements with designer back patterns, sleeves, and necklines — a perfect match for every saree.",
+      "icon": "◈",
+      "image": "images/service-blouse.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Saree Pre-Pleating",
+      "description": "Professional saree pre-pleating service so you can drape effortlessly every time. Neat, crisp pleats that stay all day long.",
+      "icon": "◇",
+      "image": "images/service-saree.jpg"
+    }
+  ],
+  "gallery": [
+    { "id": 1, "src": "images/gallery1.jpg", "caption": "Maggam Work Blouse" },
+    { "id": 2, "src": "images/gallery2.jpg", "caption": "Embroidery Detail" },
+    { "id": 3, "src": "images/gallery3.jpg", "caption": "Designer Blouse" },
+    { "id": 4, "src": "images/gallery4.jpg", "caption": "Bridal Blouse" },
+    { "id": 5, "src": "images/gallery5.jpg", "caption": "Zardozi Work" },
+    { "id": 6, "src": "images/gallery6.jpg", "caption": "Pre-Pleated Saree" }
+  ],
+  "testimonials": [
+    {
+      "name": "Priya Reddy",
+      "location": "Rajahmundry",
+      "text": "The blouse stitching is absolutely perfect — fits like a dream. Jyothi garu's attention to detail is unmatched. I won't go anywhere else now!",
+      "rating": 5
+    },
+    {
+      "name": "Lakshmi Devi",
+      "location": "Kakinada",
+      "text": "Got my wedding sarees pre-pleated here. The pleats were so crisp and clean — held the entire evening. Exceptional service and very professional.",
+      "rating": 5
+    },
+    {
+      "name": "Sravani Rao",
+      "location": "Rajahmundry",
+      "text": "The Maggam work on my blouse is breathtaking. Everyone at the function was asking where I got it done. Highly recommend JO'STYLE!",
+      "rating": 5
+    },
+    {
+      "name": "Anitha Kumari",
+      "location": "Vizianagaram",
+      "text": "Computer embroidery work on my daughter's frock came out exactly as I imagined. Quick delivery and very reasonable pricing. A hidden gem!",
+      "rating": 5
+    }
+  ]
+}

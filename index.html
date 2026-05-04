@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JO'STYLE — All Ladies Fashion</title>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── NAVBAR ─────────────────────────────────────────── -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo" id="nav-logo">JO'STYLE</a>
+      <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#founder">About</a></li>
+        <li><a href="#booking">Book Now</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ── HERO ───────────────────────────────────────────── -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Est. in Rajahmundry</p>
+      <h1 class="hero-title" id="hero-title">JO'STYLE</h1>
+      <div class="hero-divider"><span></span><span class="hero-diamond">◆</span><span></span></div>
+      <p class="hero-tagline" id="hero-tagline">All Ladies Fashion — One Place</p>
+      <a href="#booking" class="btn-primary">Book an Appointment</a>
+    </div>
+    <a href="#services" class="hero-scroll-hint">
+      <span>Explore</span>
+      <svg width="16" height="24" viewBox="0 0 16 24"><path d="M8 0v20M1 14l7 8 7-8" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </section>
+
+  <!-- ── STRIP ──────────────────────────────────────────── -->
+  <div class="strip">
+    <div class="strip-inner">
+      <span>✦ Computer Embroidery</span>
+      <span>✦ Maggam Work</span>
+      <span>✦ Blouse Stitching</span>
+      <span>✦ Saree Pre-Pleating</span>
+      <span>✦ Computer Embroidery</span>
+      <span>✦ Maggam Work</span>
+      <span>✦ Blouse Stitching</span>
+      <span>✦ Saree Pre-Pleating</span>
+    </div>
+  </div>
+
+  <!-- ── SERVICES ───────────────────────────────────────── -->
+  <section id="services" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">What We Offer</p>
+        <h2 class="section-title">Our Services</h2>
+        <p class="section-subtitle">Each piece crafted with devotion, precision, and timeless elegance.</p>
+      </div>
+      <div class="services-grid" id="services-grid"></div>
+    </div>
+  </section>
+
+  <!-- ── GALLERY ────────────────────────────────────────── -->
+  <section id="gallery" class="section section-dark">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">Our Work</p>
+        <h2 class="section-title">The Gallery</h2>
+        <p class="section-subtitle">A glimpse into the artistry that defines JO'STYLE.</p>
+      </div>
+      <div class="gallery-grid" id="gallery-grid"></div>
+    </div>
+  </section>
+
+  <!-- ── LIGHTBOX ───────────────────────────────────────── -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Close">✕</button>
+    <button class="lightbox-prev" id="lightbox-prev" aria-label="Previous">&#8249;</button>
+    <button class="lightbox-next" id="lightbox-next" aria-label="Next">&#8250;</button>
+    <div class="lightbox-content">
+      <img id="lightbox-img" src="" alt="" />
+      <p id="lightbox-caption"></p>
+    </div>
+  </div>
+
+  <!-- ── FOUNDER ────────────────────────────────────────── -->
+  <section id="founder" class="section">
+    <div class="container">
+      <div class="founder-layout reveal">
+        <div class="founder-image-wrap">
+          <div class="founder-image-frame">
+            <img id="founder-img" src="images/founder.jpg" alt="Founder" />
+          </div>
+          <div class="founder-badge">
+            <span>✦</span>
+            <p>Master<br>Tailor</p>
+          </div>
+        </div>
+        <div class="founder-text">
+          <p class="section-eyebrow">The Visionary</p>
+          <h2 class="section-title" id="founder-name">Jyothi Yarramilli</h2>
+          <p class="founder-title" id="founder-designation">Founder & Master Tailor</p>
+          <div class="founder-divider"></div>
+          <p class="founder-bio" id="founder-bio">Loading...</p>
+          <a href="#booking" class="btn-primary">Work With Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── BOOKING ────────────────────────────────────────── -->
+  <section id="booking" class="section section-maroon">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow" style="color: var(--gold-light)">Reserve Your Slot</p>
+        <h2 class="section-title" style="color: #fff">Book an Appointment</h2>
+        <p class="section-subtitle" style="color: rgba(255,255,255,0.7)">We'll confirm your booking via WhatsApp within hours.</p>
+      </div>
+      <form class="booking-form reveal" id="booking-form" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="b-name">Your Name</label>
+            <input type="text" id="b-name" placeholder="e.g. Priya Reddy" required />
+          </div>
+          <div class="form-group">
+            <label for="b-phone">Phone Number</label>
+            <input type="tel" id="b-phone" placeholder="e.g. 9876543210" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="b-service">Service Required</label>
+            <select id="b-service" required>
+              <option value="">Select a service…</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="b-date">Preferred Date</label>
+            <input type="date" id="b-date" required />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="b-note">Additional Notes (optional)</label>
+          <textarea id="b-note" rows="3" placeholder="Tell us more about your requirements…"></textarea>
+        </div>
+        <button type="submit" class="btn-gold">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.12 1.531 5.843L0 24l6.343-1.504A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.795 9.795 0 01-5.012-1.376l-.36-.214-3.726.884.934-3.617-.234-.373A9.786 9.786 0 012.182 12C2.182 6.575 6.575 2.182 12 2.182S21.818 6.575 21.818 12 17.425 21.818 12 21.818z"/></svg>
+          Send via WhatsApp
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ── TESTIMONIALS ───────────────────────────────────── -->
+  <section id="testimonials" class="section">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">Kind Words</p>
+        <h2 class="section-title">What Clients Say</h2>
+      </div>
+      <div class="testimonials-grid" id="testimonials-grid"></div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ────────────────────────────────────────── -->
+  <section id="contact" class="section section-dark">
+    <div class="container">
+      <div class="section-header reveal">
+        <p class="section-eyebrow">Find Us</p>
+        <h2 class="section-title">Get in Touch</h2>
+      </div>
+      <div class="contact-layout reveal">
+        <div class="contact-card">
+          <div class="contact-icon">📞</div>
+          <p class="contact-label">Phone</p>
+          <a id="contact-phone" href="tel:7893634888" class="contact-value">7893634888</a>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">📍</div>
+          <p class="contact-label">Address</p>
+          <p class="contact-value" id="contact-address">Airport Road, Gadala, Rajahmundry</p>
+          <a id="maps-link" href="#" target="_blank" class="btn-outline" style="margin-top:14px">Open in Maps</a>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">📸</div>
+          <p class="contact-label">Instagram</p>
+          <a id="insta-link" href="#" target="_blank" class="contact-value">@jostyle_rajahmundry</a>
+          <a id="insta-btn" href="#" target="_blank" class="btn-outline" style="margin-top:14px">Follow Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ─────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-logo" id="footer-logo">JO'STYLE</p>
+      <p class="footer-tagline" id="footer-tagline">All Ladies Fashion — One Place</p>
+      <div class="footer-links">
+        <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#founder">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <p class="footer-copy">© <span id="footer-year"></span> JO'STYLE. All rights reserved. · Rajahmundry, AP</p>
+    </div>
+  </footer>
+
+  <!-- ── WHATSAPP FLOAT ─────────────────────────────────── -->
+  <a id="whatsapp-float" href="#" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.12 1.531 5.843L0 24l6.343-1.504A11.934 11.934 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.795 9.795 0 01-5.012-1.376l-.36-.214-3.726.884.934-3.617-.234-.373A9.786 9.786 0 012.182 12C2.182 6.575 6.575 2.182 12 2.182S21.818 6.575 21.818 12 17.425 21.818 12 21.818z"/></svg>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
