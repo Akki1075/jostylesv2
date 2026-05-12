@@ -342,6 +342,7 @@ input, select, textarea { font-family: var(--font-body); }
 .service-card {
   background: var(--white);
   border: 1px solid rgba(107,26,26,0.08);
+  cursor: pointer;
   padding: 40px 28px;
   position: relative;
   overflow: hidden;
@@ -386,6 +387,15 @@ input, select, textarea { font-family: var(--font-body); }
   transition: filter var(--transition);
 }
 .service-card:hover .service-img { filter: brightness(1); }
+.service-cta {
+  display: inline-flex;
+  margin-top: 18px;
+  color: var(--maroon);
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
 
 /* ── GALLERY ──────────────────────────────────────────────── */
 .gallery-grid {

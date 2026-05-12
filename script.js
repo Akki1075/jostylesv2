@@ -2,6 +2,7 @@
 'use strict';
 
 let galleryData = [];
+let activeLightboxData = [];
 let lightboxIndex = 0;
 
 // ── FETCH DATA ────────────────────────────────────────────
@@ -65,13 +66,24 @@ function buildServices(services, business) {
   if (!grid) return;
 
   grid.innerHTML = services.map((s, i) => `
-    <div class="service-card reveal" style="--i:${i}">
+    <div class="service-card reveal" style="--i:${i}" data-service-index="${i}">
       <img class="service-img" src="${s.image}" alt="${s.name}" onerror="this.style.display='none'" />
       <span class="service-icon">${s.icon}</span>
       <h3 class="service-name">${s.name}</h3>
       <p class="service-desc">${s.description}</p>
+      <span class="service-cta">${s.gallery?.length ? 'View examples' : 'Details'}</span>
     </div>
   `).join('');
+
+  grid.querySelectorAll('.service-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const service = services[parseInt(card.dataset.serviceIndex)];
+      const items = service.gallery?.length
+        ? service.gallery
+        : [{ src: service.image, caption: service.name }];
+      openLightbox(0, items);
+    });
+  });
 }
 
 // ── GALLERY ───────────────────────────────────────────────
@@ -94,7 +106,7 @@ function buildGallery(gallery) {
   `).join('');
 
   grid.querySelectorAll('.gallery-item').forEach(item => {
-    item.addEventListener('click', () => openLightbox(parseInt(item.dataset.index)));
+    item.addEventListener('click', () => openLightbox(parseInt(item.dataset.index), galleryData));
   });
 }
 
@@ -121,7 +133,8 @@ function initLightbox() {
   });
 }
 
-function openLightbox(index) {
+function openLightbox(index, items = galleryData) {
+  activeLightboxData = items;
   lightboxIndex = index;
   updateLightbox();
   document.getElementById('lightbox').classList.add('open');
@@ -134,12 +147,12 @@ function closeLightbox() {
 }
 
 function navigateLightbox(dir) {
-  lightboxIndex = (lightboxIndex + dir + galleryData.length) % galleryData.length;
+  lightboxIndex = (lightboxIndex + dir + activeLightboxData.length) % activeLightboxData.length;
   updateLightbox();
 }
 
 function updateLightbox() {
-  const item = galleryData[lightboxIndex];
+  const item = activeLightboxData[lightboxIndex];
   const img  = document.getElementById('lightbox-img');
   const cap  = document.getElementById('lightbox-caption');
   img.src = item.src;

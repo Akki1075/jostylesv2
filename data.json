@@ -21,7 +21,14 @@
       "name": "Computer Embroidery",
       "description": "Precision machine embroidery with intricate patterns — from florals to geometric designs — crafted for sarees, dupattas, and garments.",
       "icon": "✦",
-      "image": "images/service-embroidery.jpg"
+      "image": "images/services/computer-embroidery-2.jpg",
+      "gallery": [
+        { "src": "images/services/computer-embroidery-1.jpg", "caption": "Devotional Computer Embroidery" },
+        { "src": "images/services/computer-embroidery-2.jpg", "caption": "Royal Blue Embroidered Blouse" },
+        { "src": "images/services/computer-embroidery-3.jpg", "caption": "Purple Floral Embroidery Catalog" },
+        { "src": "images/services/computer-embroidery-4.jpg", "caption": "Royal Blue Peacock Embroidery" },
+        { "src": "images/services/computer-embroidery-5.jpg", "caption": "Royal Purple Machine Embroidery" }
+      ]
     },
     {
       "id": 2,
@@ -47,11 +54,15 @@
   ],
   "gallery": [
     { "id": 1, "src": "images/gallery1.jpg", "caption": "Maggam Work Blouse" },
-    { "id": 2, "src": "images/gallery2.jpg", "caption": "Embroidery Detail" },
+    { "id": 2, "src": "images/services/computer-embroidery-2.jpg", "caption": "Royal Blue Embroidered Blouse" },
     { "id": 3, "src": "images/gallery3.jpg", "caption": "Designer Blouse" },
     { "id": 4, "src": "images/gallery4.jpg", "caption": "Bridal Blouse" },
     { "id": 5, "src": "images/gallery5.jpg", "caption": "Zardozi Work" },
-    { "id": 6, "src": "images/gallery6.jpg", "caption": "Pre-Pleated Saree" }
+    { "id": 6, "src": "images/gallery6.jpg", "caption": "Pre-Pleated Saree" },
+    { "id": 7, "src": "images/services/computer-embroidery-1.jpg", "caption": "Devotional Computer Embroidery" },
+    { "id": 8, "src": "images/services/computer-embroidery-3.jpg", "caption": "Purple Floral Embroidery Catalog" },
+    { "id": 9, "src": "images/services/computer-embroidery-4.jpg", "caption": "Royal Blue Peacock Embroidery" },
+    { "id": 10, "src": "images/services/computer-embroidery-5.jpg", "caption": "Royal Purple Machine Embroidery" }
   ],
   "testimonials": [
     {
