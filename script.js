@@ -32,6 +32,7 @@ function initSite(data) {
   initNavbar();
   initHamburger();
   initLightbox();
+  initServiceDetails();
   initScrollReveal();
 
   document.getElementById('footer-year').textContent = new Date().getFullYear();
@@ -78,12 +79,96 @@ function buildServices(services, business) {
   grid.querySelectorAll('.service-card').forEach(card => {
     card.addEventListener('click', () => {
       const service = services[parseInt(card.dataset.serviceIndex)];
-      const items = service.gallery?.length
-        ? service.gallery
-        : [{ src: service.image, caption: service.name }];
-      openLightbox(0, items);
+      if (service.gallerySections?.length) {
+        openServiceDetails(service);
+        return;
+      }
+
+      openLightbox(0, getServiceGalleryItems(service));
     });
   });
+}
+
+function getServiceGalleryItems(service) {
+  if (service.gallerySections?.length) {
+    return service.gallerySections.flatMap(section => section.items);
+  }
+
+  return service.gallery?.length
+    ? service.gallery
+    : [{ src: service.image, caption: service.name }];
+}
+
+function initServiceDetails() {
+  if (document.getElementById('service-details')) return;
+
+  document.body.insertAdjacentHTML('beforeend', `
+    <div id="service-details" class="service-details" role="dialog" aria-modal="true" aria-hidden="true">
+      <div class="service-details-panel">
+        <button id="service-details-close" class="service-details-close" aria-label="Close service details">Close</button>
+        <p class="section-eyebrow">Service Examples</p>
+        <h2 id="service-details-title" class="service-details-title"></h2>
+        <p id="service-details-desc" class="service-details-desc"></p>
+        <div id="service-details-sections" class="service-details-sections"></div>
+      </div>
+    </div>
+  `);
+
+  const modal = document.getElementById('service-details');
+  document.getElementById('service-details-close').addEventListener('click', closeServiceDetails);
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeServiceDetails();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('open')) closeServiceDetails();
+  });
+}
+
+function openServiceDetails(service) {
+  const modal = document.getElementById('service-details');
+  const title = document.getElementById('service-details-title');
+  const desc = document.getElementById('service-details-desc');
+  const sections = document.getElementById('service-details-sections');
+  const allItems = getServiceGalleryItems(service);
+
+  title.textContent = service.name;
+  desc.textContent = service.description;
+  sections.innerHTML = service.gallerySections.map(section => `
+    <section class="service-example-section">
+      <div class="service-example-heading">
+        <h3>${section.title}</h3>
+        <span>${section.items.length} ${section.items.length === 1 ? 'example' : 'examples'}</span>
+      </div>
+      <div class="service-example-grid">
+        ${section.items.map(item => `
+          <button class="service-example-item" type="button" data-src="${item.src}">
+            <img src="${item.src}" alt="${item.caption}" loading="lazy" />
+            <span>${item.caption}</span>
+          </button>
+        `).join('')}
+      </div>
+    </section>
+  `).join('');
+
+  sections.querySelectorAll('.service-example-item').forEach(item => {
+    item.addEventListener('click', () => {
+      const index = allItems.findIndex(photo => photo.src === item.dataset.src);
+      openLightbox(Math.max(index, 0), allItems);
+    });
+  });
+
+  modal.classList.add('open');
+  modal.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeServiceDetails() {
+  const modal = document.getElementById('service-details');
+  if (!modal) return;
+
+  modal.classList.remove('open');
+  modal.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
 }
 
 // ── GALLERY ───────────────────────────────────────────────
@@ -143,7 +228,8 @@ function openLightbox(index, items = galleryData) {
 
 function closeLightbox() {
   document.getElementById('lightbox').classList.remove('open');
-  document.body.style.overflow = '';
+  const serviceModal = document.getElementById('service-details');
+  document.body.style.overflow = serviceModal?.classList.contains('open') ? 'hidden' : '';
 }
 
 function navigateLightbox(dir) {

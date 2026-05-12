@@ -28,6 +28,23 @@
         { "src": "images/services/computer-embroidery-3.jpg", "caption": "Purple Floral Embroidery Catalog" },
         { "src": "images/services/computer-embroidery-4.jpg", "caption": "Royal Blue Peacock Embroidery" },
         { "src": "images/services/computer-embroidery-5.jpg", "caption": "Royal Purple Machine Embroidery" }
+      ],
+      "gallerySections": [
+        {
+          "title": "Portraits",
+          "items": [
+            { "src": "images/services/computer-embroidery-1.jpg", "caption": "Devotional Computer Embroidery Portrait" }
+          ]
+        },
+        {
+          "title": "Blouse & Catalog Designs",
+          "items": [
+            { "src": "images/services/computer-embroidery-2.jpg", "caption": "Royal Blue Embroidered Blouse" },
+            { "src": "images/services/computer-embroidery-3.jpg", "caption": "Purple Floral Embroidery Catalog" },
+            { "src": "images/services/computer-embroidery-4.jpg", "caption": "Royal Blue Peacock Embroidery" },
+            { "src": "images/services/computer-embroidery-5.jpg", "caption": "Royal Purple Machine Embroidery" }
+          ]
+        }
       ]
     },
     {
