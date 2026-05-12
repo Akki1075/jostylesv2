@@ -569,6 +569,24 @@ input, select, textarea { font-family: var(--font-body); }
   margin-top: 14px;
   text-transform: uppercase;
 }
+.lightbox-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 18px;
+  border: 1px solid rgba(191,148,68,0.55);
+  background: var(--gold);
+  color: var(--maroon-dark);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  min-height: 44px;
+  padding: 12px 18px;
+  text-transform: uppercase;
+}
+.lightbox-whatsapp:hover {
+  background: var(--gold-light);
+}
 .lightbox-close, .lightbox-prev, .lightbox-next {
   position: fixed;
   color: rgba(255,255,255,0.7);

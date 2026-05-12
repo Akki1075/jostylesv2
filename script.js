@@ -4,6 +4,7 @@
 let galleryData = [];
 let activeLightboxData = [];
 let lightboxIndex = 0;
+let businessData = null;
 
 // ── FETCH DATA ────────────────────────────────────────────
 async function loadData() {
@@ -20,6 +21,7 @@ async function loadData() {
 // ── INIT ─────────────────────────────────────────────────
 function initSite(data) {
   const { business, founder, services, gallery, testimonials } = data;
+  businessData = business;
 
   applyBusiness(business);
   applyFounder(founder);
@@ -241,9 +243,22 @@ function updateLightbox() {
   const item = activeLightboxData[lightboxIndex];
   const img  = document.getElementById('lightbox-img');
   const cap  = document.getElementById('lightbox-caption');
+  const wa   = document.getElementById('lightbox-whatsapp');
+  const imageUrl = new URL(item.src, window.location.href).href;
+
   img.src = item.src;
   img.alt = item.caption;
   cap.textContent = item.caption;
+
+  if (wa && businessData) {
+    const message = [
+      `Hello JO'STYLE, I am interested in this design: ${item.caption}`,
+      `Image: ${imageUrl}`,
+      'Please share details, availability, and price.'
+    ].join('\n');
+
+    wa.href = `https://wa.me/${businessData.whatsapp}?text=${encodeURIComponent(message)}`;
+  }
 }
 
 // ── TESTIMONIALS ──────────────────────────────────────────
